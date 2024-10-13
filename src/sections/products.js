@@ -2,130 +2,14 @@
 import { jsx, Box, Container, Image } from "theme-ui";
 import Logo from "assets/images/newLogo.png";
 import bottomShelf from "assets/images/bottomShelf.png";
-import flowerHolder from "assets/images/flowerHolder.PNG";
-import leftPot from "assets/images/leftPot.PNG";
-import rightPot from "assets/images/rightPot.PNG";
-import floor from "assets/images/floor.svg";
-import top from "assets/images/top.png";
+
 import ptb from "assets/images/gif/products-tools-booking.gif";
 
 // import WallBig from "assets/images/wall.png";
-import WallSmall from "assets/images/newFL.png";
 import landing from "assets/images/landing.png";
 import { keyframes } from "@emotion/core";
 import { Link } from "components/link";
 import Shelf from "components/Shelf";
-import Wig1 from "assets/images/wigs/1.png";
-import Wig2 from "assets/images/wigs/2.png";
-import Wig3 from "assets/images/wigs/3.png";
-import Wig4 from "assets/images/wigs/4.png";
-import Wig5 from "assets/images/wigs/5.png";
-import Wig6 from "assets/images/wigs/6.png";
-import Wig7 from "assets/images/wigs/7.png";
-import Wig8 from "assets/images/wigs/8.png";
-import Wig9 from "assets/images/wigs/9.png";
-import customWig from "assets/images/gif/custom-wig.gif";
-import hdLace from "assets/images/gif/hd-lace.gif";
-import transparentLace from "assets/images/gif/transparent-lace.gif";
-import raw from "assets/images/wigs/raw.png";
-import six from "assets/images/wigs/613.png";
-import virgin from "assets/images/wigs/virgin.png";
-import hd from "assets/images/wigs/hd.png";
-import transparent from "assets/images/wigs/transparent.png";
-import watercolor from "assets/images/wigs/watercolorpng.png";
-import shelfTransparent from "assets/images/shelfTransparentLace.png";
-import shelfHd from "assets/images/shelfHdLace.png";
-import shelfCustom from "assets/images/shelfCustomWigs.png";
-
-const data = {
-  rowOne: {
-    products: [
-      {
-        src: Wig2,
-        alt: "RAW",
-        path: "/shop/hd/raw",
-        label: raw,
-      },
-      {
-        src: Wig1,
-        alt: "VIRGIN",
-        path: "/shop/hd/virgin",
-
-        label: virgin,
-      },
-      {
-        src: Wig3,
-        alt: "613",
-        path: "/shop/hd/613",
-
-        label: six,
-      },
-    ],
-    title: "HD LACE",
-    src: hdLace,
-    shelf: shelfHd,
-
-    path: "/shop/hd",
-  },
-  rowTwo: {
-    products: [
-      {
-        src: Wig5,
-        alt: "RAW",
-        label: raw,
-        path: "/shop/transparent/raw",
-      },
-      {
-        src: Wig4,
-        alt: "VIRGIN",
-        path: "/shop/transparent/virgin",
-
-        label: virgin,
-      },
-      {
-        src: Wig6,
-        alt: "613",
-        path: "/shop/transparent/613",
-
-        label: six,
-      },
-    ],
-    title: "TRANSPARENT LACE",
-    src: transparentLace,
-    shelf: shelfTransparent,
-
-    path: "/shop/transparent",
-  },
-  rowThree: {
-    products: [
-      {
-        src: Wig7,
-        alt: "TRANSPARENT",
-        path: "/shop/custom/transparent",
-
-        label: transparent,
-      },
-      {
-        src: Wig8,
-        alt: "HD",
-        path: "/shop/custom/hd",
-
-        label: hd,
-      },
-      {
-        src: Wig9,
-        alt: "WATERCOLOR",
-        path: "/shop/custom/watercolor",
-        label: watercolor,
-      },
-    ],
-    title: "CUSTOM WIGS",
-    src: customWig,
-    shelf: shelfCustom,
-
-    path: "/shop/custom",
-  },
-};
 
 const Products = () => {
   return (

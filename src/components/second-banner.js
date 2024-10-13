@@ -1,18 +1,12 @@
 /** @jsx jsx */
 import { jsx, Container, Heading, Box } from "theme-ui";
 import PatternBG from "assets/images/new_banner.png";
-import { padding } from "polished";
 
 export default function Banner({ title = " ", accent = " " }) {
   return (
     <section sx={styles.banner}>
       <Box sx={styles.bannerBackground}>
-        <Container sx={styles.container}>
-          {/* <Heading as="h2" sx={styles.title}>
-            {title}
-            <span sx={styles.title.accent}> {accent}</span>
-          </Heading> */}
-        </Container>
+        <Container sx={styles.container}></Container>
       </Box>
     </section>
   );
@@ -20,27 +14,14 @@ export default function Banner({ title = " ", accent = " " }) {
 
 const styles = {
   banner: {
-    
-    // pb: [2, null, 0, null, 2, 0, null, 5],
-    // pt: ["105px", "105px", "140px", "150px", "150px", "160px"],
-    
-    background: "rgba(233,244,248,1) ",
-    // padding:"250px",
-    py:"300px",
+    py: "300px",
     backgroundImage: `url(${PatternBG})`,
     backgroundRepeat: `no-repeat`,
     backgroundPosition: "center center",
     backgroundSize: "cover",
 
-   
-
-    "@media screen and (max-width:760px)": {
-      // backgroundImage: "none",
-      // background: "rgba(233,244,248,1) ",
-    },
+    "@media screen and (max-width:760px)": {},
   },
-
-  
 
   title: {
     zIndex: 5,

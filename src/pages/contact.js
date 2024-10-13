@@ -9,11 +9,9 @@ import ContactForm from "components/contactForm";
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
-     
-        <SEO title="Contact" />
-        <Banner title="Get in touch  " accent="with us" />
-        <ContactForm />
-     
+      <SEO title="Contact" />
+      <Banner title="Get in touch  " accent="with us" />
+      <ContactForm />
     </ThemeProvider>
   );
 }

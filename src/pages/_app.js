@@ -14,12 +14,9 @@ import "assets/css/react-slick.css";
 import Contact from "pages/contact.js";
 
 export default function CustomApp({ Component, pageProps }) {
- 
-
   return (
-  <>
-  <Contact/>
-  
-  </>
+    <>
+      <Contact />
+    </>
   );
 }
