@@ -9,8 +9,8 @@ const Subscribe = () => {
     <Box as="section" sx={styles.section}>
       <Container>
        
-        <h1 style={{color:"#909090",textAlign:"center",fontSize:"30px"}}>SUBSCRIBE NOW!</h1>
-        <p style={{color:"black",textAlign:"center"}}>SIGN UP TO BE FIRST IN LINE TO RECEIVE UPDATES, <br></br> EXCLUSIVE PERKS & ACCESS TO MEMBERS ONLY CONTENT.</p>
+        <h1 style={{color:"#909090",textAlign:"center",fontSize:"20px"}}>SUBSCRIBE NOW!</h1>
+        <p style={{color:"black",textAlign:"center" , fontSize:"12px",fontWeight:"semi-bold"}}>SIGN UP TO BE FIRST IN LINE TO RECEIVE UPDATES, <br></br> EXCLUSIVE PERKS & ACCESS TO MEMBERS ONLY CONTENT.</p>
         <SubscriptionForm sx={styles.subscriptionForm} />
       </Container>
     </Box>

@@ -10,7 +10,7 @@ export default ({ disabled, children }) => {
 const styles = {
   cursor: 'pointer',
   borderRadius: '3px',
-  padding: '0.7rem 2.5rem',
+  // padding: '0.7rem 2.5rem',
   border: 'none',
   webkitAppearance: ' none',
   webkitTouchCallout: 'none',

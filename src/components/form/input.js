@@ -5,12 +5,13 @@ export default function InputField({ error, ...rest }) {
 }
 
 const styles = {
-  width: " 100%",
+
+  width: "255px",
   boxSizing: "border-box",
   border: "3px solid ",
   borderColor: "black",
-  padding: " 0.8rem 1rem",
-  borderRadius: "7px",
+  padding: "0px",
+  borderRadius: "0px",
   marginBottom: "0.5rem",
   transition: "0.3s",
   color: "black",
