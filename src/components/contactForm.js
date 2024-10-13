@@ -27,6 +27,7 @@ const ContactForm = () => {
             paddingTop: "20px",
             fontSize: "13px",
             fontWeight:600,
+            fontFamily: "Futura Pt,'sans-serif",
           }}
         >
           A WHOLE NEW VIRTUAL SHOPPING EXPERIENCE AWAITS. <br></br>
@@ -44,27 +45,24 @@ const ContactForm = () => {
           success: false,
         }}
         validationSchema={Yup.object().shape({
-          name: Yup.string().required("This field is required."),
-          forProfit: Yup.string().required("This field is required."),
-          phone: Yup.string().required("This field is required."),
-          subject: Yup.string().required("This field is required."),
+          // name: Yup.string().required("This field is required."),
+          // forProfit: Yup.string().required("This field is required."),
+          // phone: Yup.string().required("This field is required."),
+          // subject: Yup.string().required("This field is required."),
           email: Yup.string()
             .email("Invalid email")
             .required("This field is required."),
           message: Yup.string().required("This field is required."),
         })}
         onSubmit={async (
-          { name, forProfit, email, subject, message, phone },
+          { email,},
           { setSubmitting, resetForm, setFieldValue }
         ) => {
           try {
             const data = JSON.stringify({
-              name,
+             
               email,
-              forProfit,
-              subject,
-              message,
-              phone,
+              
             });
             console.log("data", subject);
             const config = {
@@ -96,12 +94,12 @@ const ContactForm = () => {
 
           return (
             <Form>
-             <h2 style={{textAlign:"center", fontSize:"20px",color:"#909090",fontWeight:600}}>SUBSCRIBE NOW!</h2>
-             <p style={{textAlign:"center",fontSize:"12px",fontWeight:600,color:"black"}}>SIGN UP TO BE FIRST IN LINE TO RECEIVE UPDATES, EXCLUSIVE PERKS & ACCESS TO MEMBERS ONLY CONTENT.</p>
+             <h2 style={{textAlign:"center", fontSize:"20px",color:"#909090",fontWeight:600,  fontFamily: "Futura Pt,'sans-serif'",}}>SUBSCRIBE NOW!</h2>
+             <p style={{textAlign:"center",fontSize:"12px",fontWeight:600,color:"black",fontFamily: "Futura Pt,'sans-serif'"}}>SIGN UP TO BE FIRST IN LINE TO RECEIVE UPDATES, EXCLUSIVE PERKS & ACCESS TO MEMBERS ONLY CONTENT.</p>
               
               <Box sx={styles.inputField}>
                 <Input
-                style={{backgroundColor:"white",borderRadius:"0px",with:"255px",height:"22px"}}
+                style={{backgroundColor:"white",borderRadius:"0px",with:"255px",height:"22px",fontSize:"12px"}}
                   id="email"
                   aria-label="email"
                   component="input"
@@ -109,7 +107,7 @@ const ContactForm = () => {
                   type="email"
                   name="email"
                   className="text__area"
-                  placeholder="EMAIL ADSRESS*"
+                  placeholder="EMAIL ADDRESS*"
                   error={touched.email && errors.email}
                 />
                 <ErrorMessage component={Error} name="email" />
@@ -176,7 +174,7 @@ const styles = {
       "&:focus": {
         "&:focus": {
           borderColor: "black",
-          boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+          // boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
           outline: "none",
         },
       },
@@ -190,11 +188,12 @@ const styles = {
       textAlign: "center",
     },
     button: {
+      fontFamily:"Futura Pt,'sans-serif'",
       "&:hover": {
          color:"#EB1C24"
         },
       minHeight:"0px",
-      pb:"10px",
+      pb:"35px",
       boxShadow:"none",
       backgroundColor:"transparent",
       backgroundImage:"none",

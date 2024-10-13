@@ -50,13 +50,13 @@ export default {
     },
   },
   fonts: {
-    body: "DM Sans",
+    body: "Fotura",
     // body:
     //   'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: "DM Sans",
     // heading: 'Bree Serif',
     monospace: "Menlo, monospace",
-    fontFamily: "'Montserrat', sans-serif",
+    
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   fontWeights: {
