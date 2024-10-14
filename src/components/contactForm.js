@@ -4,35 +4,30 @@ import * as Yup from "yup";
 import Input from "./form/input";
 import Error from "./form/error";
 import Bg from "assets/images/s_banner.png";
-import { Box, Button, Container } from "theme-ui";
+import { Box, Button, Container,Text } from "theme-ui";
 import Subscribe from "sections/subscribe";
 import { borderRadius, margin } from "polished";
+import Bg2 from "assets/images/rkhama_web.png";
+
 
 const ContactForm = () => {
   return (
-    <section
-      style={{
-        backgroundImage: `url(${Bg})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+    <Box sx={styles.section}
+    //   style={{
+       
+    //     "@media screen and (max-width:728px)": {
+      
+    //   backgroundImage: `url(${Bg2})`,
+    // backgroundRepeat: `no-repeat`,
+    // backgroundSize: "cover",
+    // },
+    //   }}
     >
       <Container sx={styles.container}>
-        <h1
-          style={{
-            color: "#EB1C24",
-            textAlign: "center",
-            marginBottom: "40px",
-            marginTop: 0,
-            paddingTop: "20px",
-            fontSize: "13px",
-            fontWeight:600,
-            fontFamily: "Futura Pt,'sans-serif",
-          }}
-        >
+        <Text sx={styles.title}>
           A WHOLE NEW VIRTUAL SHOPPING EXPERIENCE AWAITS. <br></br>
           LAUNCHING VERY SOON.
-        </h1>
+        </Text>
 
         <Formik
         initialValues={{
@@ -94,12 +89,12 @@ const ContactForm = () => {
 
           return (
             <Form>
-             <h2 style={{textAlign:"center", fontSize:"20px",color:"#909090",fontWeight:600,  fontFamily: "Futura Pt,'sans-serif'",}}>SUBSCRIBE NOW!</h2>
-             <p style={{textAlign:"center",fontSize:"12px",fontWeight:600,color:"black",fontFamily: "Futura Pt,'sans-serif'"}}>SIGN UP TO BE FIRST IN LINE TO RECEIVE UPDATES, EXCLUSIVE PERKS & ACCESS TO MEMBERS ONLY CONTENT.</p>
+             <Text sx={styles.sub} >SUBSCRIBE NOW!</Text>
+             <Text sx={styles.paragraph} >SIGN UP TO BE FIRST IN LINE TO RECEIVE UPDATES,<br></br> EXCLUSIVE PERKS & ACCESS TO MEMBERS ONLY CONTENT.</Text>
               
               <Box sx={styles.inputField}>
                 <Input
-                style={{backgroundColor:"white",borderRadius:"0px",with:"255px",height:"22px",fontSize:"12px"}}
+                style={{borderRadius:"0px",height:"22px",fontSize:"12px"}}
                   id="email"
                   aria-label="email"
                   component="input"
@@ -124,17 +119,72 @@ const ContactForm = () => {
         }}
       </Formik>
       </Container>
-    </section>
+    </Box>
   );
 };
 
 const styles = {
+  section:{
+    backgroundImage: `url(${Bg2})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    "@media screen and (max-width:728px)": {
+      
+      backgroundImage: `url(${Bg})`,
+    backgroundRepeat: `no-repeat`,
+   
+    backgroundSize: "cover",
+    },
+  },
+  
   container: {
     py: ["0px", "40px"],
     width: "100%",
-    
+   
+  },
+  title:{
+    "@media screen and (max-width:728px)": {
+      
+     fontSize:"13px",
+     color:"#EB1C24",
+     pt:"14px"
+    },
+
+    fontSize:"20px",
+    color:"#EB1C24",
+    textAlign:"center",
+    fontFamily:"Futura Pt,'sans-serif'",
+    fontWeight:600,
   },
 
+  sub:{
+    "@media screen and (max-width:728px)": {
+      
+    fontSize:"20px",
+    color:"#909090"
+    },
+    mt:"35px",
+    mb:"12px",
+    fontSize:"30px",
+    color:"#909090",
+    textAlign:"center",
+    fontFamily:"Futura Pt,'sans-serif'",
+    fontWeight:600,
+  },
+
+  paragraph:{
+    "@media screen and (max-width:728px)": {
+      
+    fontSize:"12px",
+    color:"black"
+    },
+    mb:"10px",
+    fontSize:"18px",
+    color:"black",
+    textAlign:"center",
+    fontFamily:"Futura Pt,'sans-serif'",
+    fontWeight:600,
+  },
   inputField: {
     color: "black",
     borderColor: "black",
@@ -145,13 +195,19 @@ const styles = {
       borderColor: "  #ff4136 !important",
       borderWidth: "  1px !important",
     },
-    ".text__area ": {
-      backgroundColor: "darkRed",
-    },
+    
 
     ".text__area": {
+      "@media screen and (max-width:728px)": {
+      
+        width: "255px",
+        },
+        borderRadius:"0px",
+        fontSize:"12px",
+       
+      backgroundColor:"white",
       margin:"auto",
-      width: "255px",
+      width: "400px",
       boxSizing: "border-box",
       border: "2px solid ",
       borderColor: "black",
@@ -188,6 +244,7 @@ const styles = {
       textAlign: "center",
     },
     button: {
+      mx: "auto",
       fontFamily:"Futura Pt,'sans-serif'",
       "&:hover": {
          color:"#EB1C24"

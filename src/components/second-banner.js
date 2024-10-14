@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Container, Heading, Box } from "theme-ui";
 import PatternBG from "assets/images/new_banner.png";
-
+import PatternBG2 from "assets/images/bg_web.png"
 export default function Banner({ title = " ", accent = " " }) {
   return (
     <section sx={styles.banner}>
@@ -15,12 +15,18 @@ export default function Banner({ title = " ", accent = " " }) {
 const styles = {
   banner: {
     py: "300px",
-    backgroundImage: `url(${PatternBG})`,
+    backgroundImage: `url(${PatternBG2})`,
     backgroundRepeat: `no-repeat`,
     backgroundPosition: "center center",
     backgroundSize: "cover",
 
-    "@media screen and (max-width:760px)": {},
+    "@media screen and (max-width:728px)": {
+      py: "300px",
+      backgroundImage: `url(${PatternBG})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: "center bottom",
+    backgroundSize: "cover",
+    },
   },
 
   title: {
